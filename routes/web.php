@@ -26,3 +26,7 @@ Route::get('/payments/results', 'FeeController@getPayment'),//Get results from s
     ]
 );
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
