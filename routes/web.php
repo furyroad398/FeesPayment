@@ -14,14 +14,14 @@ Auth::routes(
     [
         Route::get('/', 'StudentController@home'),
 
-Route::get('/add', 'StudentController@index'), //Go to add student form
-Route::post('/add/student', 'StudentController@create'), //save student details to database
-Route::get('/search/', 'StudentController@search'), // Go to search method to get results
+Route::get('/add', 'StudentController@index'), //add student form
+Route::post('/add/student', 'StudentController@create'), //save student details 
+Route::get('/search/', 'StudentController@search'), // get results from search method 
 
-Route::get('/payfee', 'FeeController@index'), // Go to search form to get student whose fees are being paid
-Route::post('/paid/finished', 'FeeController@payFees'), //Go to payfees method in order to save payment
-Route::get('/payments', 'FeeController@searchPayment'),// Go to searchPayment form to find a student's transaction history
-Route::get('/payments/results', 'FeeController@getPayment'),//Returns results from searchPayment form
+Route::get('/payfee', 'FeeController@index'), // get student fees are being paid
+Route::post('/paid/finished', 'FeeController@payFees'), //Go to payfees method to save payment
+Route::get('/payments', 'FeeController@searchPayment'),// Go to searchPayment for transaction history
+Route::get('/payments/results', 'FeeController@getPayment'),//Get results from searchPayment form
 
     ]
 );
